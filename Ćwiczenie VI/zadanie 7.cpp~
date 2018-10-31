@@ -1,0 +1,109 @@
+#include <iostream>
+
+using namespace std;
+
+class Punkt
+{
+public:
+  double x,y;
+  Punkt(): x(0.0), y(0.0)
+  {
+  }
+  Punkt(double a, double b): x(a), y(b)
+  {
+  }
+};
+
+class Odcinek
+{
+public:
+  Punkt p;
+  Punkt q;
+  Odcinek(Punkt a, Punkt b): p(a), q(b)
+  {
+  }
+  Odcinek(double ax, double ay, double bx, double by)
+  {
+    Punkt a(ax, ay);
+    Punkt b(bx, by);
+    p=a;
+    q=b;
+  }
+};
+
+double wyznacznik(Punkt p, Punkt q, Punkt r)
+{
+  return (p.x*q.y+p.y*r.x+q.x*r.y-q.y*r.x-p.y*q.x-p.x*r.y);
+}
+
+bool wewnatrz(Odcinek ab, Punkt c)
+{
+  if(wyznacznik(ab.p,ab.q,c)==0)
+    if((ab.p.x<c.x&&ab.p.y<c.y&&ab.q.x>c.x&&ab.q.y>c.y)||(ab.q.x<c.x&&ab.q.y<c.y&&ab.p.x>c.x&&ab.p.y>c.y))
+      return true;
+  return false;
+}
+
+bool przecinanie(Odcinek ab, Odcinek cd)
+{
+  if(wewnatrz(ab,cd.p)||wewnatrz(ab,cd.q))
+  {
+    return true;
+  }
+  else
+  {
+    if(((wyznacznik(ab.p,ab.q,cd.p)>0)&&(wyznacznik(ab.p,ab.q,cd.q)<0))||((wyznacznik(ab.p,ab.q,cd.p)<0)&&(wyznacznik(ab.p,ab.q,cd.q)>0)))
+      if(((wyznacznik(cd.p,cd.q,ab.p)>0)&&(wyznacznik(cd.p,cd.q,ab.q)<0))||((wyznacznik(cd.p,cd.q,ab.p)<0)&&(wyznacznik(cd.p,cd.q,ab.q)>0)))
+	return true;
+    return false;
+  }
+}
+
+bool przecinanie(Punkt a, Punkt b, Punkt c, Punkt d)
+{
+  Odcinek ab(a,b);
+  Odcinek cd(c,d);
+  return przecinanie(ab,cd);
+}
+
+class Stos
+{
+};
+
+class Zbior
+{
+public:
+  struct Lista
+  {
+    Punkt punkt;
+    Lista *nast;
+  };
+
+  Lista lista;
+  Zbior()
+  {
+    lista.punkt=Punkt();
+    lista.nast=NULL;
+  }
+
+  void dodajPunkt(Punkt p)
+  {
+    Lista nowy;
+    nowy.punkt=p;
+    nowy.nast=lista.nast;
+    lista.nast=&nowy;
+  }  
+
+  Stos& Graham()
+  {
+    Stos S;
+    Stos &s=S;
+    return s;
+  }
+};
+
+int main(void)
+{
+  
+  return 0;
+}

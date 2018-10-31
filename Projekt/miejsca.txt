@@ -1,0 +1,14 @@
+nazwa|szerokość|długość
+Kościół;49st40m3.991sekN;21st12m57.164sekE
+Cmentarz;49st40m4.799sekN;21st13m7.283sekE
+Figurka św. Floriana;49st40m2.9sekN;21st13m19.055sekE
+Cmentarz nr 100;49st40m43.244sekN;21st13m14.334sekE
+Cmentarz nr 99/Kaplica dworska;49st41m4.956sekN;21st12m31.031sekE
+Stacja Benzynowa Zakole;49st41m11.616sekN;21st12m5.837sekE
+Zamek;49st40m52.201sekN;21st13m12.528sekE
+Żelazny Krzyż;49st41m4.68sekN;21st13m9.723sekE
+Stadion;49st40m9.767sekN;21st13m18.84sekE
+Szkoła;49st40m5.429sekN;21st13m19.773sekE
+Szkoła specjalna;49st39m51.95sekN;21st12m53.533sekE
+Gorzelnia;49st41m3.624sekN;21st12m20.75sekE
+Rozbój;49st39m42.219sekN;21st11m39.594sekE

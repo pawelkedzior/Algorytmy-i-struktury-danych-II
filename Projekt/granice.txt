@@ -1,0 +1,5 @@
+kierunek|wymiar
+PN;49st41m14.777sekN
+ZA;21st11m38.255sekE
+PD;49st39m38.653sekN
+WS;21st13m57.765sekE
